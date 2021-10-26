@@ -21,3 +21,7 @@ int DaysInYearRange(int year1, int year2) {
 	}
 	return ans;
 }
+
+int SecondsInHours(int hours) {
+	return hours * 60 * 60;
+}
