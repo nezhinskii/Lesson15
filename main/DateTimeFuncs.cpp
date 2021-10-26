@@ -4,7 +4,7 @@ bool IsLeapYear(int year) {
 	return (year % 400 == 0) || (year % 4 == 0 && year % 100 != 0);
 }
 
-tm& LaterInYear(tm& d1, tm& d2) {
+tm LaterInYear(tm d1, tm d2) {
 	if (d1.tm_mon < d2.tm_mon) return d2;
 	if (d1.tm_mon > d2.tm_mon) return d1;
 	return (d1.tm_mday < d2.tm_mday) ? d2 : d1;
@@ -20,4 +20,8 @@ int DaysInYearRange(int year1, int year2) {
 		ans += DaysInYear(i);
 	}
 	return ans;
+}
+
+int SecondsInHours(int hours) {
+	return hours * 60 * 60;
 }
