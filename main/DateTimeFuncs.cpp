@@ -13,3 +13,11 @@ tm& LaterInYear(tm& d1, tm& d2) {
 int DaysInYear(int year) {
 	return IsLeapYear(year) ? 366 : 365;
 }
+
+int DaysInYearRange(int year1, int year2) {
+	int ans = 0;
+	for (int i = year1; i <= year2; ++i) {
+		ans += DaysInYear(i);
+	}
+	return ans;
+}
